@@ -1,6 +1,6 @@
 import pickle
 
-from saves import *
+from objects.saves import *
 
 
 class Game:
@@ -8,9 +8,11 @@ class Game:
 
     def __init__(self, lock, save_data: Save):
         assert(lock == Game.__lock), \
-                ""
+                "Game may not be instantiated directly; use Game#from_file(filename) or Game#new()"
 
-        self.save_data = save_data
+        self.current_situation = save_data.current_situation
+        self.current_sequence = save_data.current_sequence
+        self.player = save_data.player
 
     @classmethod
     def from_file(cls, filename: str):

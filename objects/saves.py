@@ -1,15 +1,8 @@
 from dataclasses import dataclass
 import json
 
-
-@dataclass
-class Achievement:
-    pass
-
-
-@dataclass
-class Item:
-    pass
+from objects.achievements import Achievement
+from objects.items import Item
 
 
 @dataclass
@@ -24,6 +17,7 @@ class Save:
     player: Player
     time: str
     game_flags: list[int]
-    current_location: int
+    current_situation: int
+    current_sequence: int
 
     achievements: list[Achievement]

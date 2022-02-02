@@ -1,8 +1,8 @@
-from objects import scenes
+from objects.situations import *
 
 
 def main():
-    print(scenes)
+    pass
 
 
 if __name__ == "__main__":

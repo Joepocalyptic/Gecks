@@ -172,13 +172,13 @@
           "branches": []
         },
         {
-          "choice": "“Alright, what do you want pal?”",
+          "choice": "“Alright, what do you want, pal?”",
           "actor": "Bandit",
-          "text": "“Heh, that’s what I thought. I want all your cash, and some food, and DON’T think about givin’ us a raw deal...”",
+          "text": "“Heh, that’s what I thought. I want all your cash, and DON’T think about givin’ us a raw deal...”",
           "actions": [],
           "branches": [
             {
-              "choice": "< Hand over half your items >",
+              "choice": "< Hand over half your cash >",
               "actor": "Bandit",
               "text": "",
               "actions": [
@@ -188,14 +188,42 @@
                 }
               ],
               "branches": [
-
+                {
+                  "choice": "",
+                  "actor": "",
+                  "text": "",
+                  "actions": [
+                    {
+                      "type": 4,
+                      "params": [50]
+                    }
+                  ],
+                  "branches": []
+                },
+                {
+                  "choice": "",
+                  "actor": "",
+                  "text": "",
+                  "actions": [
+                    {
+                      "type": 96,
+                      "params": [0]
+                    }
+                  ],
+                  "branches": []
+                }
               ]
             },
             {
-              "choice": "< Hand over all your items >",
+              "choice": "< Hand over all your cash >",
               "actor": "Bandit",
               "text": "",
-              "actions": [],
+              "actions": [
+                {
+                "type": 4,
+                "params": [100]
+                }
+              ],
               "branches": []
             }
           ]
