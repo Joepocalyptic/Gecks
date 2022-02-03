@@ -5,3 +5,6 @@ from dataclasses import dataclass
 class Item:
     id: int
     name: str
+
+
+parsed_items = list[Item]()

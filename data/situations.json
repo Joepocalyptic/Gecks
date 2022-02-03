@@ -151,7 +151,7 @@
     }
   ]
 }, {
-  "id": 0,
+  "id": 1,
   "sequences": [
     {
       "id": 0,
@@ -162,13 +162,8 @@
         {
           "choice": "Heh.  I find it rather interesting that you four think you can take me on. Bring it!",
           "actor": "Bandit",
-          "text": "“We got a tough guy on our hands boys, let’s teach this punk a lesson!” *Initiate fight*",
-          "actions": [
-            {
-              "type": 96,
-              "params": [0]
-            }
-          ],
+          "text": "“We got a tough guy on our hands boys, let’s teach this punk a lesson!”",
+          "actions": [],
           "branches": []
         },
         {
@@ -179,7 +174,7 @@
           "branches": [
             {
               "choice": "< Hand over half your cash >",
-              "actor": "Bandit",
+              "actor": "",
               "text": "",
               "actions": [
                 {
@@ -216,7 +211,7 @@
             },
             {
               "choice": "< Hand over all your cash >",
-              "actor": "Bandit",
+              "actor": "",
               "text": "",
               "actions": [
                 {

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from game import Game
+from objects.items import parsed_items
 
 
 @dataclass
@@ -9,12 +9,12 @@ class Action:
     params: list[any]
 
 
-actions = dict[int, callable]()
+parsed_actions = dict[int, callable]()
 
 
 def action(_type):
     def decorator(func):
-        actions[_type] = lambda game, params: func(game, params)
+        parsed_actions[_type] = lambda game, params: func(game, params)
 
         def wrapper(*args, **kwargs):
             return func(*args, **kwargs)
@@ -25,17 +25,28 @@ def action(_type):
 
 
 @action(0)
-def goto(game: Game, params: list[any]):
+def goto(game, params: list[any]):
     game.current_sequence = params[0]
+    print("test")
 
 
 @action(2)
-def add_item(game: Game, params: list[any]):
-    game.player.items.add()
+def add_item(game, params: list[any]):
+    game.player.items.append(parsed_items[params])
 
 
 @action(3)
-def consume_item(game: Game, params: list[any]):
+def consume_item(game, params: list[any]):
     for i,item in enumerate(game.player.items):
         if item.id == params[0]:
             del game.player.items[i]
+
+
+@action(4)
+def reduce_cash(game, params: list[any]):
+    game.player.cash = game.player.cash - (game.player.cash * (params[0] / 100))
+
+
+@action(4)
+def reduce_cash(game, params: list[any]):
+    game.player.cash = game.player.cash - (game.player.cash * (params[0] / 100))

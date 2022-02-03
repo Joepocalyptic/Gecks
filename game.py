@@ -1,9 +1,12 @@
 import pickle
 
 from objects.saves import *
+from objects.situations import *
 
 
 class Game:
+    exit = False
+
     __lock = object()
 
     def __init__(self, lock, save_data: Save):
@@ -30,6 +33,31 @@ class Game:
             ),
             time="",
             game_flags=list(),
-            current_location=0,
+            current_sequence=0,
+            current_situation=0,
             achievements=list()
         ))
+
+    def play(self):
+        self.__run_situation()
+
+    def __run_situation(self):
+        pass
+        # situation = parsed_situations[self.current_situation]
+
+        # for i in range(self.current_sequence, len(parsed_situations)):
+        #    if not self.__run_sequence(situation[i]):
+        #        break
+
+        #self.__run_situation()
+
+
+    def __run_sequence(self, branch=False):
+        situation = parsed_situations[self.current_situation]
+
+        if len(situation.branches) > 0:
+            for branch in situation.branches:
+                branch
+
+        input("\nPress enter to continue...")
+        return True

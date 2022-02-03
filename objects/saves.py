@@ -8,7 +8,7 @@ from objects.items import Item
 @dataclass
 class Player:
     name: str
-    money: int
+    cash: int
     items: list[Item]
 
 

@@ -1,3 +1,4 @@
+from game import Game
 from objects.situations import *
 
 
@@ -6,4 +7,5 @@ def main():
 
 
 if __name__ == "__main__":
+    Game.new().play()
     main()
