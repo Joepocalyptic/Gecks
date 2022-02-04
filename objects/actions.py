@@ -47,6 +47,11 @@ def reduce_cash(game, params: list[any]):
     game.player.cash = game.player.cash - (game.player.cash * (params[0] / 100))
 
 
-@action(4)
-def reduce_cash(game, params: list[any]):
-    game.player.cash = game.player.cash - (game.player.cash * (params[0] / 100))
+@action(95)
+def random_branch(game, params: list[any]):
+    game = game.player.cash - (game.player.cash * (params[0] / 100))
+
+
+@action(99)
+def trigger_ending(game, params: list[any]):
+    pass

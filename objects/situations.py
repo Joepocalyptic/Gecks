@@ -59,6 +59,3 @@ def __parse_situations():
 
 
 parsed_situations = __parse_situations()
-
-import pprint
-pprint.pprint(parsed_situations)

@@ -4,6 +4,34 @@ from objects.saves import *
 from objects.situations import *
 
 
+def format_dialogue(text):
+    words = text.split()
+    new_text = ""
+    word_count = 0
+    for word in words:
+        new_text += word + " "
+        word_count += 1
+        if word_count == 20:
+            new_text += "\n"
+            word_count = 0
+
+    return new_text
+
+
+def get_branch(branches):
+    print()
+    for i,branch in enumerate(branches):
+        print(f"{i + 1}.) {branch.choice}")
+
+    while True:
+        try:
+            choice = int(input("\nPlease enter your choice: "))
+            return branches[choice-1]
+        except (ValueError, IndexError):
+            print("Invalid input.")
+            continue
+
+
 class Game:
     exit = False
 
@@ -42,22 +70,21 @@ class Game:
         self.__run_situation()
 
     def __run_situation(self):
-        pass
-        # situation = parsed_situations[self.current_situation]
-
-        # for i in range(self.current_sequence, len(parsed_situations)):
-        #    if not self.__run_sequence(situation[i]):
-        #        break
-
-        #self.__run_situation()
-
-
-    def __run_sequence(self, branch=False):
         situation = parsed_situations[self.current_situation]
 
-        if len(situation.branches) > 0:
-            for branch in situation.branches:
-                branch
+        for i in range(self.current_sequence, len(situation.sequences)):
+            if not self.__run_sequence(situation.sequences[i]):
+                break
 
-        input("\nPress enter to continue...")
+        self.__run_situation()
+
+    def __run_sequence(self, sequence):
+        print()
+        if not sequence.text == "":
+            print(f"{sequence.actor + ': ' if sequence.actor != '' else ''}{format_dialogue(sequence.text)}")
+
+        if len(sequence.branches) > 0:
+            self.__run_sequence(get_branch(sequence.branches))
+        else:
+            input("\nPress enter to continue... ")
         return True
