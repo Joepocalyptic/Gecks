@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-import json
 
 from objects.achievements import Achievement
 from objects.items import Item

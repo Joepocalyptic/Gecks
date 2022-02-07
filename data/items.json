@@ -1,22 +1,30 @@
-[{
-  "id": 0,
-  "name": "Pack of Cigarettes"
-}, {
-  "id": 1,
-  "name": "Toy Horse"
-}, {
-  "id": 2,
-  "name": "Church Key"
-}, {
-  "id": 3,
-  "name": "Broken Gravestone"
-}, {
-  "id": 4,
-  "name": "Jail Cell Key"
-}, {
-  "id": 5,
-  "name": "Mysterious Lever"
-}, {
-  "id": 6,
-  "name": "Ticket for Sir Lance's Show"
-}]
+[
+  {
+    "id": 0,
+    "name": "Pack of Cigarettes"
+  },
+  {
+    "id": 1,
+    "name": "Toy Horse"
+  },
+  {
+    "id": 2,
+    "name": "Church Key"
+  },
+  {
+    "id": 3,
+    "name": "Broken Gravestone"
+  },
+  {
+    "id": 4,
+    "name": "Jail Cell Key"
+  },
+  {
+    "id": 5,
+    "name": "Mysterious Lever"
+  },
+  {
+    "id": 6,
+    "name": "Ticket for Sir Lance's Show"
+  }
+]

@@ -1,229 +1,247 @@
-[{
-  "id": 0,
-  "sequences": [
-    {
-      "id": 0,
-      "actor": "",
-      "text": "In the midst of the Civil War. There lived a lonesome person within a rotting shack. This shell of their former glory would spend their tiresome days rocking back and forth on their raggedy porch, drinking an ice cold glass o’ cockroach juice. Their days of fighting were long over, however, the ever collapsing Union thought otherwise.",
-      "actions": [],
-      "branches": []
-    },
-    {
-      "id": 1,
-      "actor": "",
-      "text": "A Union man slowly strolls up in his horse-drawn carriage into the front yard of the mysterious figure. He steps out of the carriage with a black umbrella, to keep himself dry from the ever raging storm. The man slowly walks up the agonisingly steep hill, and finally greets our main protagonist. The man says, “Heh, isn’t it a bit of a bad time to be drinking a pint?”",
-      "actions": [],
-      "branches": [
-        {
-          "choice": "I presume that you may or may not have a rather good point. But what’s it to ya’?",
-          "actor": "Union man",
-          "text": "“What’s it to me? The entire fate of our great nation is what it is to me.”",
-          "actions": [],
-          "branches": []
-        },
-        {
-          "choice": "Well, isn’t it a bit of a bad time to be interrupting a good honest, hard working, back breaking, American’s time?",
-          "actor": "Union man",
-          "text": "“Woah there ol’ chum, settle down now… Didn’t mean nothin’ by it. Just makin’ small talk.”",
-          "actions": [],
-          "branches": []
-        },
-        {
-          "choice": "< Say nothing >",
-          "actor": "Union man",
-          "text": "“Not much of a talker, huh? That or I am just a man by which you don’t want to communicate with. Perhaps out of intimidation, or maybe even you already know what must be done.”",
-          "actions": [],
-          "branches": []
-        },
-        {
-          "choice": "< Smash him over the head with your muddy boots >",
-          "actor": "",
-          "text": "",
-          "actions": [
-            {
-              "type": 99,
-              "params": [5]
-            }
-          ],
-          "branches": []
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "actor": "Union man",
-      "text": "Anyways, it says here on the envelope that your name is...",
-      "actions": [
-        {
-          "type": 98,
-          "params": []
-        }
-      ],
-      "branches": []
-    },
-    {
-      "id": 3,
-      "actor": "Union man",
-      "text": "“{name}... yes, I do recall that name from days past. {name}, I know that you swore away from your violent ways, and seeked pacifism into that decrepit soul of yours. But we need you to swim out of that overencumbered abyss that has been building up within you for all these long years, to help us win this war.”",
-      "actions": [
-        {
-          "type": 98,
-          "params": []
-        }
-      ],
-      "branches": [
-        {
-          "choice": "Anything for our great nation.",
-          "actor": "Union man",
-          "text": "“Now that’s the American spirit that we need to beat the hick-trash from down under!” The Union man gladly hands the envelope over to you.",
-          "actions": [],
-          "branches": []
-        },
-        {
-          "choice": "Well, I would do anything to keep our glorious country together. However, I must know what I can get out of this.",
-          "actor": "Union man",
-          "text": "“Okay, I suppose that payment is in order... how about we give you one of our newly established medals of honor?”",
-          "actions": [],
-          "branches": [
-            {
-              "choice": "Interesting, that could fit well with the other awards...",
-              "actor": "Union man",
-              "text": "“Yes indeed, it probably would make a splendid addition to what I presume is already a grand assortment of items.” The Union man hands over the envelope, and makes it back to his carriage and trots away.",
-              "actions": [],
-              "branches": []
-            },
-            {
-              "choice": "Listen, I don’t need any more useless garbage in my dumpster of a home, so give me an actual paycheck for goodness sake!",
-              "actor": "Union man",
-              "text": "No need to get so aggressive now, pay will be compensated, if you so desire.” The Union man cautiously hands over the envelope, and leaves the premises in his carriage.",
-              "actions": [],
-              "branches": []
-            }
-          ]
-        },
-        {
-          "choice": "< Say nothing >",
-          "actor": "Union man",
-          "text": "“Okay then… I guess I will take your absence of words as agreement to our proposition.” The Union man slowly slid the envelope over to you, and awkwardly made his way back to his carriage.",
-          "actions": [],
-          "branches": []
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "actor": "",
-      "text": "The envelope reads “Urgent message from Lincoln’s Office. To, {name}”. With the storm still viciously crackling with thunder and lightning, you open it with the utmost care to keep it from getting wet and dissolving. The message reads, “Dear {name}, We have gotten intel from an anonymous source that the Confederate army is planning to ‘infect’ the minds and bodies of the good citizens of the town of Carcass, in California, 3 days from when you will receive this letter. We ask for you to become the official vigilante of the Union, and stop these ‘slithery’ fiends from the South. You can find your old friend Ulysses Grant within the town, it is your job to tell him so that he can round up the troops. May God bless you on your journey, and may God bless the United States of America. Sincerely, Abraham Lincoln.” You finish up your cockroach juice, and start your long trek to save Carcass, and the United States of America, supposedly.",
-      "actions": [],
-      "branches": []
-    },
-    {
-      "id": 5,
-      "actor": "",
-      "text": "You climb onto your horse-drawn carriage and set off to the town of Carcass. You think about the decisions that led up to this moment, and decide if you’re making the right choices. Eventually after riding along for many hours, you come across a fork in the road. One path will leave a quicker route to Carcass, which could give you more time to prepare for the incoming attack, but is infested with bandits and deadly wild animals. The other path is a much longer route to Carcass, which will leave you with less time to come up with a plan to deal with the incoming attack from the Confederates, but it is much safer than the first path.",
-      "actions": [],
-      "branches": [
-        {
-          "choice": "< Choose the deadly path >",
-          "actor": "",
-          "text": "",
-          "actions": [
-            {
-              "type": 97,
-              "params": [1]
-            }
-          ],
-          "branches": []
-        },
-        {
-          "choice": "< Choose the slower path >",
-          "actor": "",
-          "text": "",
-          "actions": [
-            {
-              "type": 97,
-              "params": [2]
-            }
-          ],
-          "branches": []
-        }
-      ]
-    }
-  ]
-}, {
-  "id": 1,
-  "sequences": [
-    {
-      "id": 0,
-      "actor": "",
-      "text": "You chose the more deadly path, with the logic that you can handle yourself and that a few bandits won’t stop you from reaching Carcass. Only a few hours in you run into four mean looking jaded law breaking bandits that start hijacking your carriage. They say: “Listen kid, give us all your goods or we gon’ take it by force.”",
-      "actions": [],
-      "branches": [
-        {
-          "choice": "Heh.  I find it rather interesting that you four think you can take me on. Bring it!",
-          "actor": "Bandit",
-          "text": "“We got a tough guy on our hands boys, let’s teach this punk a lesson!”",
-          "actions": [],
-          "branches": []
-        },
-        {
-          "choice": "“Alright, what do you want, pal?”",
-          "actor": "Bandit",
-          "text": "“Heh, that’s what I thought. I want all your cash, and DON’T think about givin’ us a raw deal...”",
-          "actions": [],
-          "branches": [
-            {
-              "choice": "< Hand over half your cash >",
-              "actor": "",
-              "text": "",
-              "actions": [
-                {
-                  "type": 95,
-                  "params": [0, 1]
-                }
-              ],
-              "branches": [
-                {
-                  "choice": "",
-                  "actor": "",
-                  "text": "",
-                  "actions": [
-                    {
-                      "type": 4,
-                      "params": [50]
-                    }
-                  ],
-                  "branches": []
-                },
-                {
-                  "choice": "",
-                  "actor": "",
-                  "text": "",
-                  "actions": [
-                    {
-                      "type": 96,
-                      "params": [0]
-                    }
-                  ],
-                  "branches": []
-                }
-              ]
-            },
-            {
-              "choice": "< Hand over all your cash >",
-              "actor": "",
-              "text": "",
-              "actions": [
-                {
-                "type": 4,
-                "params": [100]
-                }
-              ],
-              "branches": []
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}]
+[
+  {
+    "id": 0,
+    "sequences": [
+      {
+        "id": 0,
+        "actor": "",
+        "text": "In the midst of the Civil War. There lived a lonesome person within a rotting shack. This shell of their former glory would spend their tiresome days rocking back and forth on their raggedy porch, drinking an ice cold glass o’ cockroach juice. Their days of fighting were long over, however, the ever collapsing Union thought otherwise.",
+        "actions": [],
+        "branches": []
+      },
+      {
+        "id": 1,
+        "actor": "",
+        "text": "A Union man slowly strolls up in his horse-drawn carriage into the front yard of the mysterious figure. He steps out of the carriage with a black umbrella, to keep himself dry from the ever raging storm. The man slowly walks up the agonisingly steep hill, and finally greets our main protagonist. The man says, “Heh, isn’t it a bit of a bad time to be drinking a pint?”",
+        "actions": [],
+        "branches": [
+          {
+            "choice": "I presume that you may or may not have a rather good point. But what’s it to ya’?",
+            "actor": "Union man",
+            "text": "“What’s it to me? The entire fate of our great nation is what it is to me.”",
+            "actions": [],
+            "branches": []
+          },
+          {
+            "choice": "Well, isn’t it a bit of a bad time to be interrupting a good honest, hard working, back breaking, American’s time?",
+            "actor": "Union man",
+            "text": "“Woah there ol’ chum, settle down now… Didn’t mean nothin’ by it. Just makin’ small talk.”",
+            "actions": [],
+            "branches": []
+          },
+          {
+            "choice": "< Say nothing >",
+            "actor": "Union man",
+            "text": "“Not much of a talker, huh? That or I am just a man by which you don’t want to communicate with. Perhaps out of intimidation, or maybe even you already know what must be done.”",
+            "actions": [],
+            "branches": []
+          },
+          {
+            "choice": "< Smash him over the head with your muddy boots >",
+            "actor": "",
+            "text": "",
+            "actions": [
+              {
+                "type": 99,
+                "params": [
+                  5
+                ]
+              }
+            ],
+            "branches": []
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "actor": "Union man",
+        "text": "Anyways, it says here on the envelope that your name is...",
+        "actions": [
+          {
+            "type": 98,
+            "params": []
+          }
+        ],
+        "branches": []
+      },
+      {
+        "id": 3,
+        "actor": "Union man",
+        "text": "“{name}... yes, I do recall that name from days past. {name}, I know that you swore away from your violent ways, and seeked pacifism into that decrepit soul of yours. But we need you to swim out of that overencumbered abyss that has been building up within you for all these long years, to help us win this war.”",
+        "actions": [
+          {
+            "type": 98,
+            "params": []
+          }
+        ],
+        "branches": [
+          {
+            "choice": "Anything for our great nation.",
+            "actor": "Union man",
+            "text": "“Now that’s the American spirit that we need to beat the hick-trash from down under!” The Union man gladly hands the envelope over to you.",
+            "actions": [],
+            "branches": []
+          },
+          {
+            "choice": "Well, I would do anything to keep our glorious country together. However, I must know what I can get out of this.",
+            "actor": "Union man",
+            "text": "“Okay, I suppose that payment is in order... how about we give you one of our newly established medals of honor?”",
+            "actions": [],
+            "branches": [
+              {
+                "choice": "Interesting, that could fit well with the other awards...",
+                "actor": "Union man",
+                "text": "“Yes indeed, it probably would make a splendid addition to what I presume is already a grand assortment of items.” The Union man hands over the envelope, and makes it back to his carriage and trots away.",
+                "actions": [],
+                "branches": []
+              },
+              {
+                "choice": "Listen, I don’t need any more useless garbage in my dumpster of a home, so give me an actual paycheck for goodness sake!",
+                "actor": "Union man",
+                "text": "No need to get so aggressive now, pay will be compensated, if you so desire.” The Union man cautiously hands over the envelope, and leaves the premises in his carriage.",
+                "actions": [],
+                "branches": []
+              }
+            ]
+          },
+          {
+            "choice": "< Say nothing >",
+            "actor": "Union man",
+            "text": "“Okay then… I guess I will take your absence of words as agreement to our proposition.” The Union man slowly slid the envelope over to you, and awkwardly made his way back to his carriage.",
+            "actions": [],
+            "branches": []
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "actor": "",
+        "text": "The envelope reads “Urgent message from Lincoln’s Office. To, {name}”. With the storm still viciously crackling with thunder and lightning, you open it with the utmost care to keep it from getting wet and dissolving. The message reads, “Dear {name}, We have gotten intel from an anonymous source that the Confederate army is planning to ‘infect’ the minds and bodies of the good citizens of the town of Carcass, in California, 3 days from when you will receive this letter. We ask for you to become the official vigilante of the Union, and stop these ‘slithery’ fiends from the South. You can find your old friend Ulysses Grant within the town, it is your job to tell him so that he can round up the troops. May God bless you on your journey, and may God bless the United States of America. Sincerely, Abraham Lincoln.” You finish up your cockroach juice, and start your long trek to save Carcass, and the United States of America, supposedly.",
+        "actions": [],
+        "branches": []
+      },
+      {
+        "id": 5,
+        "actor": "",
+        "text": "You climb onto your horse-drawn carriage and set off to the town of Carcass. You think about the decisions that led up to this moment, and decide if you’re making the right choices. Eventually after riding along for many hours, you come across a fork in the road. One path will leave a quicker route to Carcass, which could give you more time to prepare for the incoming attack, but is infested with bandits and deadly wild animals. The other path is a much longer route to Carcass, which will leave you with less time to come up with a plan to deal with the incoming attack from the Confederates, but it is much safer than the first path.",
+        "actions": [],
+        "branches": [
+          {
+            "choice": "< Choose the deadly path >",
+            "actor": "",
+            "text": "",
+            "actions": [
+              {
+                "type": 97,
+                "params": [
+                  1
+                ]
+              }
+            ],
+            "branches": []
+          },
+          {
+            "choice": "< Choose the slower path >",
+            "actor": "",
+            "text": "",
+            "actions": [
+              {
+                "type": 97,
+                "params": [
+                  2
+                ]
+              }
+            ],
+            "branches": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "sequences": [
+      {
+        "id": 0,
+        "actor": "",
+        "text": "You chose the more deadly path, with the logic that you can handle yourself and that a few bandits won’t stop you from reaching Carcass. Only a few hours in you run into four mean looking jaded law breaking bandits that start hijacking your carriage. They say: “Listen kid, give us all your goods or we gon’ take it by force.”",
+        "actions": [],
+        "branches": [
+          {
+            "choice": "Heh.  I find it rather interesting that you four think you can take me on. Bring it!",
+            "actor": "Bandit",
+            "text": "“We got a tough guy on our hands boys, let’s teach this punk a lesson!”",
+            "actions": [],
+            "branches": []
+          },
+          {
+            "choice": "“Alright, what do you want, pal?”",
+            "actor": "Bandit",
+            "text": "“Heh, that’s what I thought. I want all your cash, and DON’T think about givin’ us a raw deal...”",
+            "actions": [],
+            "branches": [
+              {
+                "choice": "< Hand over half your cash >",
+                "actor": "",
+                "text": "",
+                "actions": [
+                  {
+                    "type": 95,
+                    "params": [
+                      0,
+                      1
+                    ]
+                  }
+                ],
+                "branches": [
+                  {
+                    "choice": "",
+                    "actor": "",
+                    "text": "",
+                    "actions": [
+                      {
+                        "type": 4,
+                        "params": [
+                          50
+                        ]
+                      }
+                    ],
+                    "branches": []
+                  },
+                  {
+                    "choice": "",
+                    "actor": "",
+                    "text": "",
+                    "actions": [
+                      {
+                        "type": 96,
+                        "params": [
+                          0
+                        ]
+                      }
+                    ],
+                    "branches": []
+                  }
+                ]
+              },
+              {
+                "choice": "< Hand over all your cash >",
+                "actor": "",
+                "text": "",
+                "actions": [
+                  {
+                    "type": 4,
+                    "params": [
+                      100
+                    ]
+                  }
+                ],
+                "branches": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

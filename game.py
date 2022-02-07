@@ -1,7 +1,8 @@
 import pickle
 
+from objects.endings import parsed_endings
+from objects.situations import parsed_situations
 from objects.saves import *
-from objects.situations import *
 
 
 def format_dialogue(text):
@@ -20,26 +21,25 @@ def format_dialogue(text):
 
 def get_branch(branches):
     print()
-    for i,branch in enumerate(branches):
+    for i, branch in enumerate(branches):
         print(f"{i + 1}.) {branch.choice}")
 
     while True:
         try:
             choice = int(input("\nPlease enter your choice: "))
-            return branches[choice-1]
+            return branches[choice - 1]
         except (ValueError, IndexError):
             print("Invalid input.")
             continue
 
 
 class Game:
-    exit = False
-
     __lock = object()
 
     def __init__(self, lock, save_data: Save):
-        assert(lock == Game.__lock), \
-                "Game may not be instantiated directly; use Game#from_file(filename) or Game#new()"
+        self.stop = False
+        assert (lock == Game.__lock), \
+            "Game may not be instantiated directly; use Game#from_file(filename) or Game#new()"
 
         self.current_situation = save_data.current_situation
         self.current_sequence = save_data.current_sequence
@@ -67,24 +67,26 @@ class Game:
         ))
 
     def play(self):
-        self.__run_situation()
+        self.run_situation(parsed_situations[self.current_situation])
 
-    def __run_situation(self):
-        situation = parsed_situations[self.current_situation]
-
+    def run_situation(self, situation):
         for i in range(self.current_sequence, len(situation.sequences)):
-            if not self.__run_sequence(situation.sequences[i]):
+            if self.stop: return
+            if not self.run_sequence(situation.sequences[i]):
                 break
 
-        self.__run_situation()
-
-    def __run_sequence(self, sequence):
+    def run_sequence(self, sequence):
         print()
         if not sequence.text == "":
             print(f"{sequence.actor + ': ' if sequence.actor != '' else ''}{format_dialogue(sequence.text)}")
 
         if len(sequence.branches) > 0:
-            self.__run_sequence(get_branch(sequence.branches))
+            self.run_sequence(get_branch(sequence.branches))
         else:
             input("\nPress enter to continue... ")
         return True
+
+    def trigger_ending(self, id_):
+        for ending in parsed_endings:
+            if ending.id == id_:
+                break
