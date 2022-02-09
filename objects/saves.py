@@ -14,9 +14,8 @@ class Player:
 @dataclass
 class Save:
     player: Player
-    time: str
     game_flags: list[int]
     current_situation: int
     current_sequence: int
 
-    achievements: list[Achievement]
+    achievements: list[int]

@@ -5,16 +5,16 @@ from objects.items import parsed_items
 
 @dataclass
 class Action:
-    type: int
+    id_: int
     params: list[any]
 
 
 parsed_actions = dict[int, callable]()
 
 
-def action(_type):
+def action(id_: int):
     def decorator(func):
-        parsed_actions[_type] = lambda game, params: func(game, params)
+        parsed_actions[id_] = lambda game, params: func(game, params)
 
         def wrapper(*args, **kwargs):
             return func(*args, **kwargs)
@@ -49,9 +49,27 @@ def reduce_cash(game, params: list[any]):
 
 @action(95)
 def random_branch(game, params: list[any]):
-    game = game.player.cash - (game.player.cash * (params[0] / 100))
+    pass
+
+
+@action(97)
+def change_situation(game, params: list[any]):
+    game.auto_continue = True
+    game.current_situation = params[0]
+
+
+@action(98)
+def set_player_name(game, params: list[any]):
+    game.auto_continue = True
+    while True:
+        name = input("\nPlease enter your name (this cannot be changed later): ")
+        if name != "":
+            game.player.name = name
+            break
+        else:
+            print("\nYour name may not be blank.")
 
 
 @action(99)
 def trigger_ending(game, params: list[any]):
-    pass
+    game.trigger_ending(params[0])

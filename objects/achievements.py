@@ -6,7 +6,6 @@ from json import load as load_json
 class Achievement:
     id: int
     name: str
-    description: str
 
 
 def __parse_achievements():
@@ -14,7 +13,7 @@ def __parse_achievements():
         json = load_json(file)
 
     return [
-        Achievement(achievement["id"], achievement["name"], achievement["description"])
+        Achievement(achievement["id"], achievement["name"])
         for achievement in json
     ]
 

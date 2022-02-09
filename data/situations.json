@@ -42,9 +42,9 @@
             "text": "",
             "actions": [
               {
-                "type": 99,
+                "id": 99,
                 "params": [
-                  5
+                  0
                 ]
               }
             ],
@@ -58,7 +58,7 @@
         "text": "Anyways, it says here on the envelope that your name is...",
         "actions": [
           {
-            "type": 98,
+            "id": 98,
             "params": []
           }
         ],
@@ -68,12 +68,7 @@
         "id": 3,
         "actor": "Union man",
         "text": "“{name}... yes, I do recall that name from days past. {name}, I know that you swore away from your violent ways, and seeked pacifism into that decrepit soul of yours. But we need you to swim out of that overencumbered abyss that has been building up within you for all these long years, to help us win this war.”",
-        "actions": [
-          {
-            "type": 98,
-            "params": []
-          }
-        ],
+        "actions": [],
         "branches": [
           {
             "choice": "Anything for our great nation.",
@@ -132,7 +127,7 @@
             "text": "",
             "actions": [
               {
-                "type": 97,
+                "id": 97,
                 "params": [
                   1
                 ]
@@ -146,7 +141,7 @@
             "text": "",
             "actions": [
               {
-                "type": 97,
+                "id": 97,
                 "params": [
                   2
                 ]
@@ -186,7 +181,7 @@
                 "text": "",
                 "actions": [
                   {
-                    "type": 95,
+                    "id": 95,
                     "params": [
                       0,
                       1
@@ -200,7 +195,7 @@
                     "text": "",
                     "actions": [
                       {
-                        "type": 4,
+                        "id": 4,
                         "params": [
                           50
                         ]
@@ -214,7 +209,7 @@
                     "text": "",
                     "actions": [
                       {
-                        "type": 96,
+                        "id": 96,
                         "params": [
                           0
                         ]
@@ -230,7 +225,7 @@
                 "text": "",
                 "actions": [
                   {
-                    "type": 4,
+                    "id": 4,
                     "params": [
                       100
                     ]

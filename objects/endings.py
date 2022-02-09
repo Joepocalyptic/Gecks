@@ -1,15 +1,15 @@
 from dataclasses import dataclass
 from json import load as load_json
 
-from objects.situations import Situation, Sequence
+from objects.situations import Sequence
 
 
 @dataclass
 class Ending:
     id: int
     name: str
+    description: str
     achievement: int
-    sequences: list[Sequence]
 
 
 def __parse_endings():
@@ -17,10 +17,7 @@ def __parse_endings():
         json = load_json(file)
 
     return [
-        Ending(ending["id"], ending["name"], ending["achievement"], [
-            Sequence(sequence["id"], sequence["actor"], sequence["text"], [], [])
-            for sequence in ending["sequences"]
-        ])
+        Ending(ending["id"], ending["name"], ending["description"], ending["achievement"])
         for ending in json
     ]
 

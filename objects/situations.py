@@ -18,7 +18,7 @@ class Sequence:
     id: int
     actor: str
     text: str
-    actions: list[Action]
+    actions: list[dict]
     branches: list[BranchSequence]
 
 
