@@ -8,40 +8,16 @@ from objects.saves import *
 
 
 class Game:
-    __lock = object()
 
-    def __init__(self, lock, save_data: Save):
+    def __init__(self, save_data: Save):
         self.stop = False
         self.auto_continue = False
-
-        assert (lock == Game.__lock), \
-            "Game may not be instantiated directly; use Game#from_file(filename) or Game#new()"
 
         self.player = save_data.player
         self.game_flags = save_data.game_flags
         self.current_situation = save_data.current_situation
         self.current_sequence = save_data.current_sequence
         self.achievements = save_data.achievements
-
-    @classmethod
-    def from_file(cls, filename: str):
-        with open(filename, "rb") as f:
-            save_data: Save = pickle.load(f)
-            return Game(cls.__lock, save_data)
-
-    @classmethod
-    def new(cls):
-        return Game(cls.__lock, Save(
-            player=Player(
-                "",
-                0,
-                list()
-            ),
-            game_flags=list[int](),
-            current_sequence=0,
-            current_situation=0,
-            achievements=list[Achievement]()
-        ))
 
     def play(self):
         self.run_situation(parsed_situations[self.current_situation])
